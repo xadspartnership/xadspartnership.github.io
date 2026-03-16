@@ -50,7 +50,7 @@ const i18n = {
       avatarAlt: "Profil fotografi",
       subtitle: "Tek linkte tum platformlarim ve ozel icerikler",
       verified: "Dogrulanmis",
-      followers: "12.4K Takipci",
+      followers: "487,5 B Takipçi",
     },
     cta: {
       vip: "VIP Alana Geç",
