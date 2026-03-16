@@ -18,12 +18,10 @@ const i18n = {
       aria: "Affiliate banners",
       items: [
         {
-          title: "Affiliate Banner 1",
-          subtitle: "Replace URL and image in script.js",
+          title: "Join the World's Largest Sex & Swinger Community",
         },
         {
-          title: "Affiliate Banner 2",
-          subtitle: "Replace URL and image in script.js",
+          title: "Undress Her with AI -- Try Free Now",
         },
       ],
     },
@@ -61,12 +59,10 @@ const i18n = {
       aria: "Affiliate bannerlari",
       items: [
         {
-          title: "Affiliate Banner 1",
-          subtitle: "URL ve gorseli script.js icinden degistir",
+          title: "Join the World's Largest Sex & Swinger Community",
         },
         {
-          title: "Affiliate Banner 2",
-          subtitle: "URL ve gorseli script.js icinden degistir",
+          title: "Undress Her with AI -- Try Free Now",
         },
       ],
     },
@@ -92,14 +88,13 @@ const i18n = {
 // Replace these with your CrakRevenue affiliate links and banner image URLs.
 const bannerDefinitions = [
   {
-    url: "https://example.com/affiliate-offer-1",
-    image:
-      "https://dummyimage.com/1200x675/240b0b/f20d0d&text=CrakRevenue+Banner+01",
+    url: "https://t.crdtg2.com/407969/4299/37955?aff_sub=x_bio_test1&aff_sub5=SF_006OG000004lmDN",
+    image: "./images/hf_20260316_215925_bc6747b3-0ca8-4f07-9d2c-0ed79f9ba83d.jpeg",
   },
   {
-    url: "https://example.com/affiliate-offer-2",
+    url: "https://t.me/DeepEyeXbot",
     image:
-      "https://dummyimage.com/1200x675/2a0d0d/ff6a6a&text=CrakRevenue+Banner+02",
+      "./images/hf_20260316_215925_bc6747b3-0ca8-4f07-9d2c-0ed79f9ba83d223a.jpeg",
   },
 ];
 
@@ -177,7 +172,6 @@ function renderBanners() {
       <img src="${banner.image}" alt="${localized.title}" loading="lazy" />
       <span class="affiliate-overlay">
         <h3>${localized.title}</h3>
-        <p>${localized.subtitle}</p>
       </span>
     `;
 
