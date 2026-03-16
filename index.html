@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>XADS | Link Sayfasi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:FILL@0..1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-orb orb-one" aria-hidden="true"></div>
+    <div class="bg-orb orb-two" aria-hidden="true"></div>
+
+    <main class="page-shell">
+      <section class="profile-card">
+        <header class="profile-header">
+          <div class="avatar-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?auto=format&fit=crop&w=240&q=80"
+              alt="Profil fotografi"
+              class="avatar"
+            />
+            <span class="badge">NEW</span>
+          </div>
+          <h1>@xadspartnership</h1>
+          <p class="subtitle">Tek linkte tum platformlarim ve ozel icerikler</p>
+          <div class="meta-row">
+            <span class="meta-pill">
+              <span class="material-symbols-outlined">verified</span>
+              Dogrulanmis
+            </span>
+            <span class="meta-pill">
+              <span class="material-symbols-outlined">groups</span>
+              12.4K Takipci
+            </span>
+          </div>
+        </header>
+
+        <a class="vip-btn" href="https://example.com/vip" target="_blank" rel="noreferrer">
+          <span class="material-symbols-outlined">bolt</span>
+          VIP Alana Gec
+        </a>
+
+        <section class="links" id="linksContainer" aria-label="Profil linkleri"></section>
+
+        <div class="quick-actions">
+          <button type="button" class="action-btn" id="copyBtn">
+            <span class="material-symbols-outlined">content_copy</span>
+            Linki Kopyala
+          </button>
+          <button type="button" class="action-btn" id="shareBtn">
+            <span class="material-symbols-outlined">share</span>
+            Paylas
+          </button>
+        </div>
+
+        <p class="status-text" id="statusText" aria-live="polite"></p>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
