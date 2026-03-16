@@ -3,35 +3,27 @@ const SUPPORTED_LANGS = ["en", "tr"];
 const i18n = {
   en: {
     meta: {
-      pageTitle: "XADS | Link Page",
+      pageTitle: "MyWifeAndYou | Link Page",
     },
     profile: {
       avatarAlt: "Profile photo",
       subtitle: "All my platforms and premium content in one link",
       verified: "Verified",
-      followers: "12.4K Followers",
+      followers: "487.3K Followers",
     },
     cta: {
       vip: "Enter VIP Access",
     },
-    links: {
-      aria: "Profile links",
+    banners: {
+      aria: "Affiliate banners",
       items: [
         {
-          title: "YouTube",
-          subtitle: "Weekly videos and live streams",
+          title: "Affiliate Banner 1",
+          subtitle: "Replace URL and image in script.js",
         },
         {
-          title: "Instagram",
-          subtitle: "Daily reels and stories",
-        },
-        {
-          title: "Discord Community",
-          subtitle: "Live chat and member events",
-        },
-        {
-          title: "Join Newsletter",
-          subtitle: "Get new drops by email",
+          title: "Affiliate Banner 2",
+          subtitle: "Replace URL and image in script.js",
         },
       ],
     },
@@ -48,13 +40,13 @@ const i18n = {
       shareNotAvailable: "Sharing is not available now.",
     },
     shareData: {
-      title: "XADS Link Page",
+      title: "MyWifeAndYou Link Page",
       text: "All my links are here:",
     },
   },
   tr: {
     meta: {
-      pageTitle: "XADS | Link Sayfasi",
+      pageTitle: "MyWifeAndYou | Link Sayfasi",
     },
     profile: {
       avatarAlt: "Profil fotografi",
@@ -65,24 +57,16 @@ const i18n = {
     cta: {
       vip: "VIP Alana Gec",
     },
-    links: {
-      aria: "Profil linkleri",
+    banners: {
+      aria: "Affiliate bannerlari",
       items: [
         {
-          title: "YouTube",
-          subtitle: "Haftalik video ve canli yayinlar",
+          title: "Affiliate Banner 1",
+          subtitle: "URL ve gorseli script.js icinden degistir",
         },
         {
-          title: "Instagram",
-          subtitle: "Gunluk reels ve hikayeler",
-        },
-        {
-          title: "Discord Toplulugu",
-          subtitle: "Canli sohbet ve topluluk etkinlikleri",
-        },
-        {
-          title: "Bultene Katil",
-          subtitle: "Yeni icerikleri e-posta ile al",
+          title: "Affiliate Banner 2",
+          subtitle: "URL ve gorseli script.js icinden degistir",
         },
       ],
     },
@@ -99,32 +83,27 @@ const i18n = {
       shareNotAvailable: "Paylasim su an kullanilamiyor.",
     },
     shareData: {
-      title: "XADS Link Sayfasi",
+      title: "MyWifeAndYou Link Sayfasi",
       text: "Tum linklerim burada:",
     },
   },
 };
 
-const linkDefinitions = [
+// Replace these with your CrakRevenue affiliate links and banner image URLs.
+const bannerDefinitions = [
   {
-    url: "https://youtube.com",
-    icon: "play_circle",
+    url: "https://example.com/affiliate-offer-1",
+    image:
+      "https://dummyimage.com/1200x675/240b0b/f20d0d&text=CrakRevenue+Banner+01",
   },
   {
-    url: "https://instagram.com",
-    icon: "photo_camera",
-  },
-  {
-    url: "https://discord.com",
-    icon: "forum",
-  },
-  {
-    url: "https://example.com/newsletter",
-    icon: "mail",
+    url: "https://example.com/affiliate-offer-2",
+    image:
+      "https://dummyimage.com/1200x675/2a0d0d/ff6a6a&text=CrakRevenue+Banner+02",
   },
 ];
 
-const linksContainer = document.getElementById("linksContainer");
+const bannerContainer = document.getElementById("affiliateBanners");
 const copyBtn = document.getElementById("copyBtn");
 const shareBtn = document.getElementById("shareBtn");
 const statusText = document.getElementById("statusText");
@@ -177,29 +156,32 @@ function applyTranslations() {
   });
 }
 
-function renderLinks() {
-  linksContainer.innerHTML = "";
-  const localizedItems = dict.links.items || i18n.en.links.items;
+function renderBanners() {
+  if (!bannerContainer) {
+    return;
+  }
 
-  linkDefinitions.forEach((link, index) => {
-    const localized = localizedItems[index] || i18n.en.links.items[index];
+  bannerContainer.innerHTML = "";
+  const localizedItems = dict.banners.items || i18n.en.banners.items;
+
+  bannerDefinitions.forEach((banner, index) => {
+    const localized = localizedItems[index] || i18n.en.banners.items[index];
     const anchor = document.createElement("a");
-    anchor.className = "link-item";
-    anchor.href = link.url;
+    anchor.className = "affiliate-banner";
+    anchor.href = banner.url;
     anchor.target = "_blank";
-    anchor.rel = "noreferrer";
+    anchor.rel = "nofollow noopener noreferrer";
     anchor.style.setProperty("--index", index);
 
     anchor.innerHTML = `
-      <span class="link-icon material-symbols-outlined">${link.icon}</span>
-      <span class="link-copy">
+      <img src="${banner.image}" alt="${localized.title}" loading="lazy" />
+      <span class="affiliate-overlay">
         <h3>${localized.title}</h3>
         <p>${localized.subtitle}</p>
       </span>
-      <span class="arrow-icon material-symbols-outlined">arrow_forward_ios</span>
     `;
 
-    linksContainer.appendChild(anchor);
+    bannerContainer.appendChild(anchor);
   });
 }
 
@@ -244,4 +226,4 @@ shareBtn.addEventListener("click", async () => {
 });
 
 applyTranslations();
-renderLinks();
+renderBanners();
