@@ -1,4 +1,4 @@
-const SUPPORTED_LANGS = ["en", "tr"];
+﻿const SUPPORTED_LANGS = ["en", "tr"];
 
 const i18n = {
   en: {
@@ -44,19 +44,19 @@ const i18n = {
   },
   tr: {
     meta: {
-      pageTitle: "MyWifeAndYou | Link Sayfasi",
+      pageTitle: "MyWifeAndYou | Link Sayfası",
     },
     profile: {
-      avatarAlt: "Profil fotografi",
-      subtitle: "Tek linkte tum platformlarim ve ozel icerikler",
-      verified: "Dogrulanmis",
+      avatarAlt: "Profil fotoğrafı",
+      subtitle: "Tek linkte tüm platformlarım ve özel içerikler",
+      verified: "Doğrulanmış",
       followers: "487,5 B Takipçi",
     },
     cta: {
       vip: "VIP Alana Geç",
     },
     banners: {
-      aria: "Affiliate bannerlari",
+      aria: "Affiliate bannerları",
       items: [
         {
           title: "Join the World's Largest Sex & Swinger Community",
@@ -68,19 +68,19 @@ const i18n = {
     },
     actions: {
       copy: "Linki Kopyala",
-      share: "Paylas",
+      share: "Paylaş",
     },
     status: {
-      copied: "Link panoya kopyalandi.",
-      copyNotSupported: "Kopyalama su an desteklenmiyor.",
-      shareOpened: "Paylasim penceresi acildi.",
-      shareCanceled: "Paylasim iptal edildi.",
-      sharedFallback: "Paylasim desteklenmiyor, link kopyalandi.",
-      shareNotAvailable: "Paylasim su an kullanilamiyor.",
+      copied: "Link panoya kopyalandı.",
+      copyNotSupported: "Kopyalama şu an desteklenmiyor.",
+      shareOpened: "Paylaşım penceresi açıldı.",
+      shareCanceled: "Paylaşım iptal edildi.",
+      sharedFallback: "Paylaşım desteklenmiyor, link kopyalandı.",
+      shareNotAvailable: "Paylaşım şu an kullanılamıyor.",
     },
     shareData: {
-      title: "MyWifeAndYou Link Sayfasi",
-      text: "Tum linklerim burada:",
+      title: "MyWifeAndYou Link Sayfası",
+      text: "Tüm linklerim burada:",
     },
   },
 };
