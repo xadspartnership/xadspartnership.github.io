@@ -53,7 +53,7 @@ const i18n = {
       followers: "12.4K Takipci",
     },
     cta: {
-      vip: "VIP Alana Gec",
+      vip: "VIP Alana Geç",
     },
     banners: {
       aria: "Affiliate bannerlari",
