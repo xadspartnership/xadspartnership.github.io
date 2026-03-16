@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>XADS | Link Sayfasi</title>
+    <title data-i18n="meta.pageTitle">XADS | Link Page</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -25,41 +25,49 @@
         <header class="profile-header">
           <div class="avatar-wrap">
             <img
-              src="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?auto=format&fit=crop&w=240&q=80"
-              alt="Profil fotografi"
+              src="https://cdn1.telesco.pe/file/j0_424ji2gYTWOviO8aDB5ptF2jCodbNnQ7WH4ztdQarFCAsTT9NsZgXw5qPSdSTcOGg7iUi6QlODORKeo_OMthrl46ATng7M7GHH-0Ph71vFzUmf-yZS1w3GbvVRIB6cn_GXWkrVpBOnIq9PWkJh6LaOilO-KtZTHz5idz458-6exdy5ZXE5asDMCZTk7KHfCa0qRM1zac_ii-UQdYoUxwbkfufoBM2eb57TqBvCd22fOxNUEB996t3DF2qTX5p2Iqg0X0uLivRGeIa_VDExujGimVIpZdSPO5RB6OA48QrMkNbm33YAT4mFb3BSHz7CdovWT6pQvAmjkJyx9L0pQ.jpg"
+              alt="Profile photo"
+              data-i18n-attr="alt:profile.avatarAlt"
               class="avatar"
             />
             <span class="badge">NEW</span>
           </div>
           <h1>@xadspartnership</h1>
-          <p class="subtitle">Tek linkte tum platformlarim ve ozel icerikler</p>
+          <p class="subtitle" data-i18n="profile.subtitle">
+            All my platforms and premium content in one link
+          </p>
           <div class="meta-row">
-            <span class="meta-pill">
+            <span class="meta-pill" data-i18n-attr="aria-label:profile.verified">
               <span class="material-symbols-outlined">verified</span>
-              Dogrulanmis
+              <span data-i18n="profile.verified">Verified</span>
             </span>
-            <span class="meta-pill">
+            <span class="meta-pill" data-i18n-attr="aria-label:profile.followers">
               <span class="material-symbols-outlined">groups</span>
-              12.4K Takipci
+              <span data-i18n="profile.followers">12.4K Followers</span>
             </span>
           </div>
         </header>
 
         <a class="vip-btn" href="https://example.com/vip" target="_blank" rel="noreferrer">
           <span class="material-symbols-outlined">bolt</span>
-          VIP Alana Gec
+          <span data-i18n="cta.vip">Enter VIP Access</span>
         </a>
 
-        <section class="links" id="linksContainer" aria-label="Profil linkleri"></section>
+        <section
+          class="links"
+          id="linksContainer"
+          aria-label="Profile links"
+          data-i18n-attr="aria-label:links.aria"
+        ></section>
 
         <div class="quick-actions">
           <button type="button" class="action-btn" id="copyBtn">
             <span class="material-symbols-outlined">content_copy</span>
-            Linki Kopyala
+            <span data-i18n="actions.copy">Copy Link</span>
           </button>
           <button type="button" class="action-btn" id="shareBtn">
             <span class="material-symbols-outlined">share</span>
-            Paylas
+            <span data-i18n="actions.share">Share</span>
           </button>
         </div>
 
